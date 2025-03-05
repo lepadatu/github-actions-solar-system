@@ -52,11 +52,10 @@ jobs:
           run: npm install
         
         - name: Code Coverage
-          run: npm run code-coverage
+          run: npm run coverage
           continue-on-error: true
 
         - name: Archive Test Result
-          if: ${{ always() }}
           uses: actions/upload-artifact@v4
           with:
             name: Code-Coverage-Result
